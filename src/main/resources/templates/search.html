@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>search page</title>
@@ -16,172 +16,7 @@
             crossorigin="anonymous">
     </script>
     <!-- bootstrap  끝 -->
-    <style type="text/css">
-        #wrap{background-color: #000000; width: 1900px; margin: 0px auto}
-        #header{background-color: red; width: 1900px; height: 80px;}
-        #nav{background-color: aqua; width: 1900px; height: 250px; position: relative;}
-        #main{background-color: lightseagreen; width: 1900px; position: relative;}
-        body{background-color: #F3F3F4; }
-
-        #header_title_name{width: 150px; height: 60px; background-color: aquamarine; float: left; text-align: center;}
-        #header_navi_list {height: 60px; background-color: aliceblue; }
-        #nav_box{background-color: #FFFFFF; width: 1000px; height: 200px; left: 60px; top: 20px; position: relative;}
-        #nav_comm_filter_list{position: absolute; top: 20px;  }
-        #nav_period_filter_list{position: absolute; top: 65px;}
-        #nav_alg_filter_list{position: absolute; top: 110px;}
-        #nav_list_search{position: absolute; top: 155px;}
-        #main_data_box{background-color: #FFFFFF; width: 1000px; border: 1px solid #333; position: absolute; left: 60px;}
-        #header_title_name_button {
-            height: 60px;
-            width: 150px;
-            background-color: aquamarine;
-            border:none; color: white;
-            font-size: 25px;
-            letter-spacing: 25px;
-            font-weight: bold; }
-
-        .btn-instiz {
-            background-color: #28c05e;
-            border-color: #28c05e;
-            color: #FFF}
-
-        .btn-fmkorea {
-            background-color: #5176cf;
-            border-color: #5176cf;
-            color: #FFF}
-
-        .btn-clien {
-            background-color: #3d4881;
-            border-color: #3d4881;
-            color: #FFF
-        }
-
-        .btn-bobae {
-            background-color: #2671bf;
-            border-color: #2671bf;
-            color: #FFF
-        }
-
-        .btn-inven {
-            background-color: #7ec73e;
-            border-color: #7ec73e;
-            color: #FFF
-        }
-
-        .btn-mlbpark {
-            background-color: #fe5e00;
-            border-color: #fe5e00;
-            color: #FFF
-        }
-        .btn-etoland {
-            background-color: #20981D;
-            border-color: #20981D;
-            color: #FFF
-        }
-
-        .btn-82cook {
-            background-color: #37832d;
-            border-color: #37832d;
-            color: #FFF
-        }
-
-        .btn-humoruniv {
-            background-color: #ed1746;
-            border-color: #ed1746;
-            color: #FFF
-        }
-
-        .rank_bg {
-            width: 40px;
-            color: #fff;
-            text-align: center;
-            vertical-align: middle;
-        }
-
-        .s_bg_bobae {
-            background-color: #2671bf!important;
-        }
-
-        .s_bg_instiz {
-            background-color: #28c05e!important;
-        }
-
-        .s_bg_clien {
-            background-color: #3d4881!important;
-        }
-
-        .s_bg_82cook {
-            background-color: #37832d!important;
-        }
-
-        .s_bg_etoland {
-            background-color: #20981D!important;
-        }
-
-        .s_bg_fmkorea {
-            background-color: #5176cf!important;
-        }
-
-        .s_bg_humoruniv {
-            background-color: #ed1746!important;
-        }
-
-        .s_bg_inven {
-            background-color: #7ec73e!important;
-        }
-
-        .s_bg_mlbpark {
-            background-color: #fe5e00!important;
-        }
-
-
-
-        .h5, h5 {
-            font-size: 14px;
-        }
-
-        .first_title {
-            font-size: 10pt;
-        }
-
-        first_title .title {
-            display: inline-block;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            max-width: 550px;
-            text-align: left;
-        }
-
-        .second_date {
-            float: left;
-            font-size: 8pt;
-            color: #ddd;
-            min-width: 200px;
-        }
-
-        .second_etc {
-            float: right;
-            font-size: 8pt;
-        }
-
-        .second_etc .hit {
-            margin: 0 10px 0 0;
-            float: left;
-        }
-
-        .second_etc .nick {
-            margin: 0 5px 0 0;
-            display: inline-block;
-            float: right;
-            width: 100px;
-            text-align: right;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-        }
-
-    </style>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/search.css }" />
 </head>
 <body>
     <div id="wrap">
@@ -221,6 +56,7 @@
                 <a class="btn btn-sm btn-inven btn-rounded" href="#">인벤</a>
                 <a class="btn btn-sm btn-mlbpark btn-rounded" href="#">엠팍</a>
             </div>
+                <div class="hr_dash"></div>
             <div id="nav_period_filter_list">  <!--시간필터-->
                 <a class="btn btn-sm btn-danger btn-rounded" href="#">3시간</a>
                 <a class="btn btn-sm btn-outline-danger btn-rounded" href="#">6시간</a>
@@ -229,10 +65,12 @@
                 <a class="btn btn-sm btn-outline-danger btn-rounded" href="#">2일</a>
                 <a class="btn btn-sm btn-outline-danger btn-rounded" href="#">3일</a>
             </div>
+                <div class="hr_dash"></div>
             <div id="nav_alg_filter_list"> <!--인기순,최신순-->
                 <a class="btn btn-sm btn-warning btn-rounded" href="#">인기순</a>
                 <a class="btn btn-sm btn-outline-warning btn-rounded" href="#">최신순</a>
             </div>
+                <div class="hr_dash"></div>
             <div id="nav_list_search"> <!--검색 버튼-->
                 <div>
                     <input type="text" placeholder="검색어를 입력해주세요."  style="width: 200px;">
@@ -243,7 +81,7 @@
         </div>
         <div id="main">
             <div id="main_data_box">
-                <table>
+                <table id="data_table" style="border: 1px solid #333;">
                     <tr>
                         <td class="h5 rank_bg s_bg_bobae" style="padding: 4px; vertical-align: middle;">
                             1</br>
