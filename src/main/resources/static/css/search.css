@@ -1,29 +1,24 @@
-#wrap{ width: 1900px; margin: 0px auto}
-#header{ width: 1900px; height: 60px;}
+#wrap{ width: 1900px; margin: 0px auto; }
+#header{ width: 1900px;}
 #nav{ width: 1900px; height: 250px; padding: 20px 20px 0px 350px; } /* padding  top, right, bottom, left*/
 #main{ width: 1900px; padding-left: 350px;}
 body{background-color: #F3F3F4; }
 #pagination_div{width: 1900px; height: 60px; padding-top: 10px; padding-left: 770px; }
 #pagination{ width: 200px;}
 
-#header_title_name{width: 150px; height: 60px; background-color: aquamarine; float: left; text-align: center;}
-#header_navi_list {height: 60px;}
+#header_title_name{width: 150px; height: 57px; float: left; background-color: #F8F9FA; }
+#header_navi_list {height: 50px;}
 #nav_box{background-color: #FFFFFF; width: 1000px; height: 200px; padding: 15px 20px 0px 20px; }
 #nav_comm_filter_list{ padding-bottom: 5px; }
 #nav_period_filter_list{ padding-bottom: 5px; }
 #nav_alg_filter_list{ padding-bottom: 5px; }
 #nav_list_search{ }
 
+
 #main_data_box{background-color: #FFFFFF; width: 1000px; }
 
 #header_title_name_button {
-    height: 60px;
     width: 150px;
-    background-color: aquamarine;
-    border:none; color: white;
-    font-size: 25px;
-    letter-spacing: 25px;
-    font-weight: bold;
 }
 
 .hr_dash {
