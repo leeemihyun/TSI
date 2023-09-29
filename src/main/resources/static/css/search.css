@@ -1,18 +1,21 @@
-#wrap{background-color: #000000; width: 1900px; margin: 0px auto}
-#header{background-color: red; width: 1900px; height: 80px;}
-#nav{background-color: aqua; width: 1900px; height: 250px; padding: 20px 20px 0px 200px; } /* padding  top, right, bottom, left*/
-#main{background-color: lightseagreen; width: 1900px; padding-left: 200px;}
+#wrap{ width: 1900px; margin: 0px auto}
+#header{ width: 1900px; height: 60px;}
+#nav{ width: 1900px; height: 250px; padding: 20px 20px 0px 350px; } /* padding  top, right, bottom, left*/
+#main{ width: 1900px; padding-left: 350px;}
 body{background-color: #F3F3F4; }
+#pagination_div{width: 1900px; height: 60px; padding-top: 10px; padding-left: 770px; }
+#pagination{ width: 200px;}
 
 #header_title_name{width: 150px; height: 60px; background-color: aquamarine; float: left; text-align: center;}
-#header_navi_list {height: 60px; background-color: aliceblue;}
+#header_navi_list {height: 60px;}
 #nav_box{background-color: #FFFFFF; width: 1000px; height: 200px; padding: 15px 20px 0px 20px; }
 #nav_comm_filter_list{ padding-bottom: 5px; }
 #nav_period_filter_list{ padding-bottom: 5px; }
 #nav_alg_filter_list{ padding-bottom: 5px; }
 #nav_list_search{ }
 
-#main_data_box{background-color: #FFFFFF; width: 1000px;  border: 1px solid #333; }
+#main_data_box{background-color: #FFFFFF; width: 1000px; }
+
 #header_title_name_button {
     height: 60px;
     width: 150px;
@@ -20,7 +23,8 @@ body{background-color: #F3F3F4; }
     border:none; color: white;
     font-size: 25px;
     letter-spacing: 25px;
-    font-weight: bold; }
+    font-weight: bold;
+}
 
 .hr_dash {
     border-top: 1px dashed #e7eaec;
@@ -132,18 +136,30 @@ body{background-color: #F3F3F4; }
 
 .h5, h5 {
     font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
 }
 
 .first_title {
     font-size: 10pt;
+    margin-bottom: 5px;
 }
 
-first_title .title {
+first_title{
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    max-width: 550px;
+    max-width: 200px;
+    text-align: left;
+}
+.title{
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 500px;
     text-align: left;
 }
 
@@ -152,11 +168,13 @@ first_title .title {
     font-size: 8pt;
     color: #ddd;
     min-width: 200px;
+    margin-top: 5px;
 }
 
 .second_etc {
     float: right;
     font-size: 8pt;
+    margin-top: 5px;
 }
 
 .second_etc .hit {
@@ -175,4 +193,19 @@ first_title .title {
     text-overflow: ellipsis;
 }
 
-#data_table{    }
+#data_table{
+    width: 1000px;
+    border-collapse: collapse;
+}
+
+th, td {
+    border-bottom: 1px solid #e7eaec;
+    padding: 10px;
+}
+
+a{
+    text-decoration-line: none;
+    color: #337ab7;
+    background-color: transparent;
+    cursor: pointer;
+}
