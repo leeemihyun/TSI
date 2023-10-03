@@ -1,17 +1,87 @@
-#wrap{background-color: #000000; width: 1900px; margin: 0px auto}
-#header{background-color: red; width: 1900px; height: 80px;}
+body{background-color: #F3F3F4; }
+
+#wrap{
+width: 1900px;
+height: auto;
+margin: 0px auto;
+}
+
+#header{
+width: 1900px;
+}
 
 
-#header_title_name{width: 150px; height: 60px; background-color: aquamarine; float: left; text-align: center;}
-#header_navi_list {height: 60px; background-color: aliceblue;}
+#header_title_name{
+width: 150px;
+height: 50px;
+float: left;
+text-align: center;
+background-color: white;
+}
+
+#header_navi_list{
+height: 60px;
+}
+
+#topNbest{
+display: flex;
+}
 
 #tsiTagTopFive{
-background-color: #3d4881;
-    width: 400px;
-    border: 1px solid #333;
+position: relative;
+width: 500px;
+height: 500px;
+top: 50px;
+left: 100px;
+background-color: white;
+}
 
+#tsiTagTopFive2{
+position: absolute;
+width: 450px;
+height: 450px;
+top: 10px;
+left: 24px;
+background-color: white;
 }
 
 #commBest{
+position: relative;
+width: 500px;
+height: 500px;
+top: 50px;
+left: 150px;
+background-color: white;
+}
 
+#commBest2{
+position: absolute;
+width: 450px;
+height: 450px;
+top: 10px;
+left: 24px;
+background-color: white;
+}
+
+
+#commBestTable{
+width: 450px;
+border-collapse: collapse;
+}
+
+.hr_dash {
+    border-top: 1px dashed #e7eaec;
+    color: #fff;
+    background-color: #fff;
+    height: 1px;
+    margin: 5px 0;
+}
+
+th, td {
+    border-bottom: 1px solid #e7eaec;
+    padding: 1px;
+}
+
+.s_bg_best1 {
+    background-color: #ED5565!important;
 }
