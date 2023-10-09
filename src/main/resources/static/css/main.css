@@ -30,7 +30,7 @@ display: flex;
 #tsiTagTopFive{
 position: relative;
 width: 500px;
-height: 500px;
+height: 550px;
 top: 50px;
 left: 100px;
 background-color: white;
@@ -39,16 +39,64 @@ background-color: white;
 #tsiTagTopFive2{
 position: absolute;
 width: 450px;
-height: 450px;
+height: 500px;
 top: 10px;
 left: 24px;
 background-color: white;
 }
 
+
+
+
+#tsiTagTopFive-tabsLeft1 {
+    position: absolute;
+    width: 100px;
+    height: 250px;
+    left: 5px;
+    background-color: yellow;
+}
+
+#tsiTagTopFive-tabsLeft2 {
+    position: absolute;
+    width: 100px;
+    height: 250px;
+    top: 280px;
+    left: 5px;
+    background-color: red;
+}
+
+#tsiTagTopFive-tabsRight1 {
+    position: absolute;
+    width: 320px;
+    height: 250px;
+    right: 3px;
+    background-color: yellow;
+}
+
+#tsiTagTopFive-tabsRight2 {
+    position: absolute;
+    width: 320px;
+    height: 250px;
+    top: 280px;
+    right: 3px;
+    background-color: red;
+}
+
+
+
+
+#tsiTagTopFiveTable{
+width: 450px;
+border-collapse: collapse;
+}
+
+
+
+
 #commBest{
 position: relative;
 width: 500px;
-height: 500px;
+height: 550px;
 top: 50px;
 left: 150px;
 background-color: white;
@@ -57,7 +105,7 @@ background-color: white;
 #commBest2{
 position: absolute;
 width: 450px;
-height: 450px;
+height: 500x;
 top: 10px;
 left: 24px;
 background-color: white;
@@ -82,6 +130,3 @@ th, td {
     padding: 1px;
 }
 
-.s_bg_best1 {
-    background-color: #ED5565!important;
-}
