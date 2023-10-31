@@ -14,19 +14,20 @@ public class CrawlerData {
     public static List<DataVO> getData() throws IOException {
         List<DataVO> list =new ArrayList<>();
 
-        Document doc= Jsoup.connect("https://blossom6729.tistory.com").get();
-
+        Document doc= Jsoup.connect("https://www.82cook.com").get();
+        System.out.println(doc);
         Elements titles=doc.select("div.post-item a span.title");
 
         Elements contents =doc.select("div.post-item a span.excerpt");
 
-        for( int i=0; i<8; i++){
-            Element title =titles.get(i);
-            Element content =contents.get(i);
-        }
+        return list;
+    }
 
-        return  list;
+    public static void main(String[] args) throws IOException {
+        getData();
     }
 
 
 }
+
+
