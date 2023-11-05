@@ -15,35 +15,46 @@ public class CrawlerData {
         List<DataVO> list =new ArrayList<>();
 
         try{
-            Document doc= Jsoup.connect("https://www.82cook.com/entiz/enti.php?bn=15").get();
-            //System.out.println(doc);
+            Document doc= Jsoup.connect("https://www.82cook.com/entiz/enti.php?bn=15").get(); //html 가져오기
             Elements titles=doc.select("#bbs > table > tbody > tr > td.title"); //제목
             Elements user_function=doc.select("#bbs > table > tbody > tr > td.user_function"); //작성자
             Elements regdateNumbers=doc.select("#bbs > table > tbody > tr > td.regdate.numbers"); //작성일자
-            Elements numbers=doc.select("#bbs > table > tbody > tr > td.numbers"); //조회수
-            Elements link=doc.select("#bbs > table > tbody > tr > td.numbers > a"); //링크
+            Elements co_link=doc.select("#bbs > table > tbody > tr > td.numbers > a"); //링크
 
             Elements index=doc.select("#bbs > table > tbody > tr"); //제목
-            System.out.println(index.get(3));
+            for(int i=3; i<index.size()-3;i++){
 
-            for(Element element: index){
-                System.out.println(element.text());
-                System.out.println("--------------");
+                String titleTemp=titles.get(i).text();
+                int tiIndex=titleTemp.lastIndexOf(" ");
+                String titleName=titleTemp.substring(0,tiIndex);
+                String commCnt=titleTemp.substring(tiIndex,titleTemp.length()).trim().replace(",","");
+                int commentCount=0;
+                try {
+                  commentCount=Integer.parseInt(commCnt);
+                }catch (NumberFormatException nfe){
+                  commentCount=0;
+                }
+                String link="https://www.82cook.com/entiz/"+co_link.get(i).attr("href"); //링크
+                String writer=user_function.get(i).text(); //작성자
+                String writeDate=regdateNumbers.get(i).text(); //작성일자
+
+                String viewCnt=index.get(i).text();
+                int vewCntIndex=viewCnt.lastIndexOf(" ");
+                viewCnt=viewCnt.substring(vewCntIndex,viewCnt.length()).trim().replace(",","");
+
+                DataVO dataVO=new DataVO(link,writeDate,writer,titleName,"82KOOK",Integer.parseInt(viewCnt), commentCount);
+                list.add(dataVO);
             }
-
         }catch (IOException e){
             e.printStackTrace();
         }
-
-        //가져올 데이터 태그 #bbs > table > tbody > tr:nth-child(1)
-        //Elements titles=doc.select("div.post-item a span.title");
-        //Elements contents =doc.select("div.post-item a span.excerpt");
 
         return list;
     }
 
     public static void main(String[] args) throws IOException {
-        getData();
+        List<DataVO> list=CrawlerData.getData();
+        System.out.println(list);
     }
 
 
