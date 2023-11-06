@@ -17,12 +17,13 @@ public class DataVO {
 
     }
 
-    public DataVO(String url, String writingTime, String writer, String titleName, String communityName, int viewCount, int commentCount) {
+    public DataVO(String url, String writingTime, String writer, String titleName, String communityName,String dataNum, int viewCount, int commentCount) {
         this.url = url;
         this.writingTime = writingTime;
         this.writer = writer;
         this.titleName = titleName;
         this.communityName = communityName;
+        this.dataNum=dataNum;
         this.viewCount = viewCount;
         this.commentCount = commentCount;
     }
