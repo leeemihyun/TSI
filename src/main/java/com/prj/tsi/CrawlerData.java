@@ -187,10 +187,15 @@ public class CrawlerData {
 
             Elements index=doc.select("body > main > section > div.board_new2_wrap > ul > li:not( .middle_line):not(.ad):not(.ad):not(.board_new2_title):not(.ad_list)"); //갯수돌리는
 
+            //제목명, 데이터번호
             for(int i=0;i<index.size();i++){
                 System.out.println(index.get(i).text());
-                System.out.println("https://www.etoland.co.kr"+index.get(i).select("div.subject > a ").attr("href"));
-                System.out.println(index.get(i).select("div.subject > a ").text());
+                System.out.println("https://www.etoland.co.kr"+index.get(i).select("div.subject > a ").attr("href")); //url
+                System.out.println(index.get(i).select("div.subject > a").text()); //제목
+                System.out.println(index.get(i).select("div.writer > a > span").text()); //글쓴이
+                System.out.println(index.get(i).select("div.datetime").text()); //시간
+                System.out.println(index.get(i).select("div.wr_hit").text()); //조회수
+                System.out.println(index.get(i).select("div.subject > a > span").text()); //댓글 수
                 //body > main > section > div.board_new2_wrap > ul > li:nth-child(6) > div.subject > a > span
                 System.out.println("-----------------------------");
             }
